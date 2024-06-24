@@ -190,7 +190,7 @@ func (c *APIClient) GetNodeInfo() (nodeInfo *api.NodeInfo, err error) {
 	// determine ssPanel version, if disable custom config or version < 2021.11, then use old api
 	c.version = nodeInfoResponse.Version
 	var isExpired bool
-	if compareVersion(c.version, "2021.11") == -1 {
+	if compareVersion(c.version, "2.11") == -1 {
 		isExpired = true
 	}
 
